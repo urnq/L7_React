@@ -1,232 +1,162 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+    background: #FFDADA;
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    padding-top: 40px;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.menu-element {
+    margin-left: 100px;
+    display: inline;
 }
 
-.card {
-  padding: 2em;
+.menu-element:nth-child(3) {
+    position: absolute;
+    right: 15%;
 }
 
-.read-the-docs {
-  color: #888;
+.menu-element:nth-child(1) {
+    margin-left: 10%;
 }
 
-/* Новые стили для Todo App */
-.todo-section {
-  margin-top: 40px;
-  padding: 20px;
-  border-top: 2px solid #e0e0e0;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.todo-section h2 {
-  color: #333;
-  margin-bottom: 30px;
-  font-size: 24px;
+.table {
+    margin-top: 20px;
+    position: relative;
+    width: 80%;
+    border-collapse: collapse;
 }
 
-.filter-tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 10px;
+.table th, td {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    height: 30px;
 }
 
-.filter-tabs button {
-  padding: 10px 20px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 16px;
-  color: #666;
-  border-radius: 4px;
-  transition: all 0.3s;
+.table th {
+    border: 2px solid black;
 }
 
-.filter-tabs button:hover {
-  background-color: #f0f0f0;
+.table tfoot td {
+    border-bottom: 2px solid black;
 }
 
-.filter-tabs button.active {
-  background-color: #007bff;
-  color: white;
+.table tfoot td:nth-child(1) {
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 1px solid black;
 }
 
-.task-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.table tfoot td:nth-child(2) {
+    border-right: 1px solid black;
 }
 
-.task-table th {
-  background-color: #f8f9fa;
-  padding: 12px;
-  text-align: left;
-  font-weight: 600;
-  color: #495057;
-  border-bottom: 2px solid #dee2e6;
+.table tfoot td:nth-child(3) {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
 }
 
-.task-table td {
-  padding: 12px;
-  border-bottom: 1px solid #dee2e6;
-  cursor: pointer;
+.table tbody td:nth-child(1) {
+    border-left: 2px solid black;
+    border-right: 1px solid black;
 }
 
-.task-table td:last-child {
-  width: 50px;
-  text-align: center;
+.table tbody td:nth-child(2) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
-.delete-btn {
-  background: none;
-  border: none;
-  color: #dc3545;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0 8px;
-  transition: color 0.3s;
+.table tbody td:nth-child(3) {
+    border-left: 1px solid black;
+    border-right: 2px solid black;
 }
 
-.delete-btn:hover {
-  color: #c82333;
+
+.select-no-complete {
+    background: #FFDADA;
+    border: none;
+}
+
+.select-complete {
+    background: #D0FFBA;
+    border: none;
+}
+
+.remove {
+    background: #FFFEBACC;
+    border: none;
+}
+
+.date-lose {
+    color: #FF0000;
+}
+
+
+.state-list {
+    margin-top: 9px;
+    width: 174px;
+    height: 28px;
+}
+
+.tde {
+    position: absolute;
+    border: none;
+
+}
+
+.trash-container {
+    display: flex;
+    background: #FFDADA;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+
+.trash-container:hover {
+    border: 2px solid black;
 }
 
 .add-button {
-  padding: 12px 24px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+    width: 193px;
+    height: 48px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background: #FFDADA;
+    border: none;
+    transition: 0.3s ease;
 }
-
 .add-button:hover {
-  background-color: #218838;
+    border: 2px solid black;
+    transform: scale(1.1);
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+.add-form-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(16, 16, 16, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  width: 400px;
-  max-width: 90%;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.modal h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-  color: #495057;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 8px 12px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
-.error {
-  color: #dc3545;
-  font-size: 12px;
-  margin-top: 5px;
-  display: block;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
-.modal-actions button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
-}
-
-.modal-actions button[type="button"] {
-  background-color: #6c757d;
-  color: white;
-}
-
-.modal-actions button[type="submit"] {
-  background-color: #007bff;
-  color: white;
-}
-
-.modal-actions button:hover {
-  opacity: 0.9;
-}
-
-.task-table input,
-.task-table select {
-  width: 100%;
-  padding: 4px 8px;
-  border: 2px solid #007bff;
-  border-radius: 4px;
-  font-size: inherit;
-}
